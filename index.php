@@ -2,7 +2,8 @@
 echo "<h1>Openshift Workshop v3.0</h1> ";
 echo "<br><hr>";
 echo "<h2>Cidades cadastradas no Banco de Dados:</h2>";
-$conn = new mysqli("mysql", "redhat", "redhat@123", "workshop");
+//$conn = new mysqli("mysql", "redhat", "redhat@123", "workshop");
+$conn=  new PDO('mysql:host=mysql;dbname=workshop', 'redhat', 'redhat@123');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
